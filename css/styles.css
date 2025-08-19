@@ -1,0 +1,67 @@
+body {
+  font-family: sans-serif;
+  background: #222;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.board-container, .level-container, .pieces-container {
+  background: #333;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(8, 2cm);
+  grid-template-rows: repeat(8, 2cm);
+  gap: 2px;
+  background: #111;
+  margin-top: 10px;
+  position: relative;
+}
+
+.cell {
+  width: 2cm;
+  height: 2cm;
+  background: #444;
+  border-radius: 4px;
+}
+
+.piece {
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: #111;
+  cursor: grab;
+}
+
+.level-area, .pieces-area {
+  display: grid;
+  grid-template-columns: repeat(4, 2cm);
+  grid-auto-rows: 2cm;
+  gap: 6px;
+  margin-top: 10px;
+  background: #111;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.cell.drop-target {
+  outline: 2px dashed yellow;
+}
